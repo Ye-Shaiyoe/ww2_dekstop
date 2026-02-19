@@ -4,8 +4,7 @@ from assets.data import QUOTES
 
 def start_typewriter(root, string_var, delay_ms=500, speed_ms=35):
     """
-    Ambil quote acak, lalu tampilkan karakter per karakter ke `string_var`.
-    Berjalan di event loop tkinter (aman untuk UI thread).
+    Ambil quote acak, lalu tampilkan karakter per karakte.
     """
     q, _ = random.choice(QUOTES)
     short = q[:72].replace("\n", " ")
