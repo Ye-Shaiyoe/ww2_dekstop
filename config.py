@@ -34,3 +34,11 @@ NAV_TABS = [
     ("❝  QUOTES",       "quotes"),
     ("📡  INTEL ROOM",  "intel"),
 ]
+
+NATION_FLAG = {
+    "United Kingdom": "🇬🇧",
+    "USA":            "🇺🇸",
+    "Soviet Union":   "⭐",
+    "Germany":        "✠",
+    "Japan":          "🇯🇵",
+}
