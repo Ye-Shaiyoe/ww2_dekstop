@@ -1,20 +1,22 @@
-import random
-from assets.data import QUOTES
+import threading
+import time
+from datetime import datetime
 
 
-def start_typewriter(root, string_var, delay_ms=500, speed_ms=35):
+def start_clock(string_var):
     """
-    Ambil quote acak, lalu tampilkan karakter per karakte.
+    Mulai thread background yang mengupdate `string_var` setiap detik
+    dengan format jam ZULU militer.
     """
-    q, _ = random.choice(QUOTES)
-    short = q[:72].replace("\n", " ")
-    idx = [0]
+    def _tick():
+        while True:
+            now = datetime.now().strftime("ZULU %H:%M:%S  |  %d %b %Y")
+            try:
+                string_var.set(now)
+            except Exception:
+                break  
+            time.sleep(1)
 
-    def _type():
-        if idx[0] <= len(short):
-            string_var.set(short[: idx[0]])
-            idx[0] += 1
-            root.after(speed_ms, _type)
-
-    root.after(delay_ms, _type)
-
+    t = threading.Thread(target=_tick, daemon=True)
+    t.start()
+    return t
