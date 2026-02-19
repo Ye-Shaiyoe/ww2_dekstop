@@ -14,3 +14,4 @@ class WW2App:
       - menginstansiasi setiap tab
       - status bar bawah
       - clock & typewriter effect
+      - etc.
