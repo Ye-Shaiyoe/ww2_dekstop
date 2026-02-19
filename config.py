@@ -14,3 +14,11 @@ GRAY_DK   = "#555555"
 GOLD      = "#DAA520"
 WHITE     = "#FFFFFF"
 GREEN_CRT = "#00FF41"   
+
+FONT_TITLE  = ("Georgia", 22, "bold")
+FONT_HEADER = ("Georgia", 14, "bold")
+FONT_SUB    = ("Georgia", 11, "italic")
+FONT_BODY   = ("Courier New", 10)
+FONT_SMALL  = ("Courier New", 9)
+FONT_MONO   = ("Courier New", 11)
+FONT_QUOTE  = ("Georgia", 11, "italic")
