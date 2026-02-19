@@ -22,3 +22,15 @@ FONT_BODY   = ("Courier New", 10)
 FONT_SMALL  = ("Courier New", 9)
 FONT_MONO   = ("Courier New", 11)
 FONT_QUOTE  = ("Georgia", 11, "italic")
+
+APP_TITLE  = "⚔  WORLD WAR II — HISTORICAL COMMAND CENTER"
+APP_SIZE   = "1100x720"
+APP_MINSIZE = (900, 600)
+
+NAV_TABS = [
+    ("⚔  BATTLES",     "battles"),
+    ("★  COMMANDERS",   "figures"),
+    ("📜  TIMELINE",    "timeline"),
+    ("❝  QUOTES",       "quotes"),
+    ("📡  INTEL ROOM",  "intel"),
+]
