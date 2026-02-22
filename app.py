@@ -43,3 +43,12 @@ class WW2App:
         tk.Label(hdr, text="✠", font=("Georgia", 36),
                  fg=KHAKI, bg=RED_WAR).pack(side="left", padx=20)
 
+        # tengah — judul
+        mid = tk.Frame(hdr, bg=RED_WAR)
+        mid.pack(side="left", expand=True)
+        tk.Label(mid, text="W O R L D   W A R   I I",
+                 font=("Georgia", 26, "bold"),
+                 fg=CREAM, bg=RED_WAR).pack()
+        tk.Label(mid, text="HISTORICAL COMMAND CENTER  •  1939 – 1945",
+                 font=("Courier New", 9), fg=KHAKI, bg=RED_WAR).pack()
+
