@@ -33,3 +33,13 @@ class WW2App:
         start_typewriter(self.root, self.quote_var)
 
        self._show_tab("battles")
+
+    def _build_header(self):
+        hdr = tk.Frame(self.root, bg=RED_WAR, height=72)
+        hdr.pack(fill="x", side="top")
+        hdr.pack_propagate(False)
+
+        # kiri — insignia
+        tk.Label(hdr, text="✠", font=("Georgia", 36),
+                 fg=KHAKI, bg=RED_WAR).pack(side="left", padx=20)
+
