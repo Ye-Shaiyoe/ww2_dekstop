@@ -15,3 +15,4 @@ class WW2App:
       - status bar bawah
       - clock & typewriter effect
       - etc.
+    """
