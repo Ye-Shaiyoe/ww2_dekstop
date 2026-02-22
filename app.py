@@ -32,3 +32,4 @@ class WW2App:
         start_clock(self.clock_var)
         start_typewriter(self.root, self.quote_var)
 
+       self._show_tab("battles")
