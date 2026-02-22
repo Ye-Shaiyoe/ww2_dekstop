@@ -81,8 +81,21 @@ class WW2App:
             btn.pack(side="left")
             self._nav_btns[key] = btn
 
-        build_date = datetime.now().strftime("%d %b %Y")
-        tk.Label(nav, text=f"  ARCHIVE BUILD: {build_date}  ",
-                 font=("Courier New", 8), fg=GRAY_DK, bg=BG_MID).pack(side="right", padx=8)
+            def _build_body(self):
+                self._body = tk.Frame(self.root, bg=BG_DARK)
+                self._body.pack(fill="both", expand=True)
+        
+                self._tabs: dict[str, tk.Frame] = {
+                    "battles":  BattlesTab(self._body,  self._set_status),
+                    "figures":  FiguresTab(self._body,  self._set_status),
+                    "timeline": TimelineTab(self._body, self._set_status),
+                    "quotes":   QuotesTab(self._body,   self._set_status),
+                    "intel":    IntelTab(self._body,    self._set_status),
+                }
 
-        tk.Frame(self.root, bg=OLIVE, height=1).pack(fill="x")
+
+            build_date = datetime.now().strftime("%d %b %Y")
+            tk.Label(nav, text=f"  ARCHIVE BUILD: {build_date}  ",
+                     font=("Courier New", 8), fg=GRAY_DK, bg=BG_MID).pack(side="right", padx=8)
+    
+            tk.Frame(self.root, bg=OLIVE, height=1).pack(fill="x")
