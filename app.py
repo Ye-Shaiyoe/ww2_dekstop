@@ -39,11 +39,9 @@ class WW2App:
         hdr.pack(fill="x", side="top")
         hdr.pack_propagate(False)
 
-        # kiri — insignia
         tk.Label(hdr, text="✠", font=("Georgia", 36),
                  fg=KHAKI, bg=RED_WAR).pack(side="left", padx=20)
 
-        # tengah — judul
         mid = tk.Frame(hdr, bg=RED_WAR)
         mid.pack(side="left", expand=True)
         tk.Label(mid, text="W O R L D   W A R   I I",
@@ -52,12 +50,10 @@ class WW2App:
         tk.Label(mid, text="HISTORICAL COMMAND CENTER  •  1939 – 1945",
                  font=("Courier New", 9), fg=KHAKI, bg=RED_WAR).pack()
 
-        # kanan — jam
         self.clock_var = tk.StringVar()
         tk.Label(hdr, textvariable=self.clock_var,
                  font=("Courier New", 10), fg=KHAKI, bg=RED_WAR).pack(side="right", padx=20)
 
-        # garis bawah header
         tk.Frame(self.root, bg=GOLD, height=2).pack(fill="x")
 
 
