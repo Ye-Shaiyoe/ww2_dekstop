@@ -29,4 +29,6 @@ class WW2App:
         self._build_statusbar()
         self._build_body()
 
+        start_clock(self.clock_var)
+        start_typewriter(self.root, self.quote_var)
 
