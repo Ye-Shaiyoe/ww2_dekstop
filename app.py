@@ -59,3 +59,24 @@ class WW2App:
 
         # garis bawah header
         tk.Frame(self.root, bg=GOLD, height=2).pack(fill="x")
+
+
+    def _build_nav(self):
+        nav = tk.Frame(self.root, bg=BG_MID, height=38)
+        nav.pack(fill="x")
+        nav.pack_propagate(False)
+
+        self._nav_btns: dict[str, tk.Button] = {}
+
+        for label, key in NAV_TABS:
+            btn = tk.Button(
+                nav, text=label,
+                font=("Courier New", 10, "bold"),
+                bg=BG_MID, fg=GRAY_LT,
+                activebackground=OLIVE, activeforeground=CREAM,
+                relief="flat", bd=0, padx=16, pady=8,
+                cursor="hand2",
+                command=lambda k=key: self._show_tab(k)
+            )
+            btn.pack(side="left")
+            self._nav_btns[key] = btn
