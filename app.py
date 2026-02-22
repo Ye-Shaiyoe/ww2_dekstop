@@ -80,3 +80,9 @@ class WW2App:
             )
             btn.pack(side="left")
             self._nav_btns[key] = btn
+
+        build_date = datetime.now().strftime("%d %b %Y")
+        tk.Label(nav, text=f"  ARCHIVE BUILD: {build_date}  ",
+                 font=("Courier New", 8), fg=GRAY_DK, bg=BG_MID).pack(side="right", padx=8)
+
+        tk.Frame(self.root, bg=OLIVE, height=1).pack(fill="x")
