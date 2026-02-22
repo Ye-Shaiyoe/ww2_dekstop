@@ -99,3 +99,13 @@ class WW2App:
                      font=("Courier New", 8), fg=GRAY_DK, bg=BG_MID).pack(side="right", padx=8)
     
             tk.Frame(self.root, bg=OLIVE, height=1).pack(fill="x")
+
+            def _show_tab(self, key: str):
+                for k, frame in self._tabs.items():
+                    frame.pack_forget()
+                self._tabs[key].pack(fill="both", expand=True)
+        
+                for k, btn in self._nav_btns.items():
+                    btn.config(bg=OLIVE if k == key else BG_MID,
+                               fg=CREAM if k == key else GRAY_LT)
+                
