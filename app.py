@@ -104,4 +104,13 @@ class WW2App:
                 for k, btn in self._nav_btns.items():
                     btn.config(bg=OLIVE if k == key else BG_MID,
                                fg=CREAM if k == key else GRAY_LT)
-                
+
+            def _build_statusbar(self):
+                bar = tk.Frame(self.root, bg=BG_MID, height=24)
+                bar.pack(fill="x", side="bottom")
+                bar.pack_propagate(False)
+                tk.Frame(bar, bg=OLIVE, height=1).pack(fill="x")
+        
+                self._status_var = tk.StringVar(value="Ready.")
+                self.quote_var   = tk.StringVar()
+
