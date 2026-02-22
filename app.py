@@ -16,3 +16,17 @@ class WW2App:
       - clock & typewriter effect
       - etc.
     """
+
+    def __init__(self, root: tk.Tk):
+        self.root = root
+        self.root.title(APP_TITLE)
+        self.root.geometry(APP_SIZE)
+        self.root.configure(bg=BG_DARK)
+        self.root.minsize(*APP_MINSIZE)
+
+        self._build_header()
+        self._build_nav()
+        self._build_statusbar()
+        self._build_body()
+
+
