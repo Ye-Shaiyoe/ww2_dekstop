@@ -56,7 +56,6 @@ class WW2App:
 
         tk.Frame(self.root, bg=GOLD, height=2).pack(fill="x")
 
-
     def _build_nav(self):
         nav = tk.Frame(self.root, bg=BG_MID, height=38)
         nav.pack(fill="x")
